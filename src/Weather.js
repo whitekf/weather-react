@@ -5,11 +5,8 @@ import Search from "./Search";
 import { Audio } from "react-loader-spinner";
 import { Rings } from "react-loader-spinner";
 import { TailSpin } from "react-loader-spinner";
-import { ThreeDots } from "react-loader-spinner";
 import { BallTriangle } from "react-loader-spinner";
 import { Hearts } from "react-loader-spinner";
-import { Oval } from "react-loader-spinner";
-import { Grid } from "react-loader-spinner";
 
 export default function Weather(props) {
   let weatherData = {
@@ -127,7 +124,11 @@ export default function Weather(props) {
 
           <footer className="foot align-self-center">
             Designed and Coded by Kassie White:
-            <a href="https://github.com/whitekf/weather-react" target="_blank">
+            <a
+              href="https://github.com/whitekf/weather-react"
+              target="_blank"
+              rel="noreferrer"
+            >
               Open Source Code
             </a>
             . Hosted on netlify. 2022
