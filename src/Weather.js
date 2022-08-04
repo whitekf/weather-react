@@ -23,7 +23,9 @@ export default function Weather(props) {
 
   let city = "Tokyo";
   function handleResponse(response) {
-    let message = `The weather in -our city- --> ${response.data.name} is ${response.data.main.temp} degrees C`;
+    console.log(
+      `The weather in -our city- --> ${response.data.name} is ${response.data.main.temp} degrees C`
+    );
   }
 
   let apiKey = "15ed5d92f7b4157fdab57b1053c46052";
