@@ -5,7 +5,7 @@ export default function Weather(props) {
   let city = "Tokyo";
   function handleResponse(response) {
     alert(
-      `The weather in New York --> ${response.data.name} is ${response.data.main.temp} degrees C`
+      `The weather in -our city- --> ${response.data.name} is ${response.data.main.temp} degrees C`
     );
   }
 
