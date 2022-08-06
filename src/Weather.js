@@ -34,16 +34,6 @@ export default function Weather(props) {
   axios.get(apiUrl).then(handleResponse);
   return (
     <div>
-      <h2>Hello from my Weather file! {city} </h2>
-      <Audio
-        height="80"
-        width="80"
-        radius="9"
-        color="blueviolet"
-        ariaLabel="three-dots-loading"
-        wrapperStyle
-        wrapperClass
-      />
       <div className="Weather">
         <div className="centerBox">
           <div className="row">
@@ -125,7 +115,11 @@ export default function Weather(props) {
           </div>
 
           <footer className="foot align-self-center">
-            Designed and Coded by Kassie White:
+            Designed and Coded by
+            <a href="https://kassiewhite.netlify.app/index.html">
+              Kassie White
+            </a>
+            .{"  "}
             <a
               href="https://github.com/whitekf/weather-react"
               target="_blank"
@@ -142,6 +136,16 @@ export default function Weather(props) {
             <BallTriangle color="white" height={80} width={80} />
             <Rings color="#00BFFF" height={80} width={80} />
             <TailSpin color="lightblue" height={80} width={80} />
+
+            <Audio
+              height="80"
+              width="80"
+              radius="9"
+              color="blueviolet"
+              ariaLabel="three-dots-loading"
+              wrapperStyle
+              wrapperClass
+            />
           </h3>
         </div>
       </div>

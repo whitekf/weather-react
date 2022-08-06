@@ -480,6 +480,7 @@ h4.city:hover {
 .foot {
   display: block;
   color: navy;
+  font-size: 16px;
   text-align: center;
   align-items: center;
   margin-left: 8%;
