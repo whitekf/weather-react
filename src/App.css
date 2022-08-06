@@ -2,19 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #80a5ef;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,19 +11,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 body {
@@ -46,12 +22,6 @@ body {
 .container {
   background-color: #d5e0ff;
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  background-image: linear-gradient(
-    -225deg,
-    #5d9fff 0%,
-    #b8dcff 48%,
-    #6bbbff 100%
-  );
   background-image: linear-gradient(-225deg, #7de2fc 0%, #b9b6e5 100%);
   background-image: linear-gradient(
     -225deg,
@@ -59,7 +29,13 @@ body {
     #5085ba 48%,
     #7085d7 100%
   );
-  padding: 0% 5% 0% 5%;
+  background-image: linear-gradient(
+    -225deg,
+    #5d9fff 0%,
+    #b8dcff 48%,
+    #6bbbff 100%
+  );
+  padding: 0% 2% 0% 2%;
 }
 
 .centerBox {
@@ -90,10 +66,11 @@ li {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 3%;
   position: sticky;
   overflow: hidden;
   text-align: left;
-  font-size: 2.5em;
+  font-size: 1.2em;
   padding-left: 5%;
   padding-top: 1%;
   color: rgb(10, 10, 142);
@@ -107,8 +84,8 @@ li {
   position: sticky;
   overflow: hidden;
   text-align: left;
-  font-size: 2.4em;
-  padding-left: 5%;
+  font-size: 1.25em;
+  padding-left: 3%;
   padding-top: 1%;
   color: navy;
   font-weight: bold;
@@ -127,7 +104,6 @@ li {
 .top-round-rainbow {
   width: 100%;
   height: 50%;
-
   background-image: repeating-linear-gradient(
     to right,
     #7fdae1 0px,
@@ -160,9 +136,9 @@ h3.dateAndTime {
   text-align: right;
   overflow: hidden;
   color: rgb(10, 10, 142);
-  margin-top: 8%;
+  margin-top: 2%;
   padding-top: 4%;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bold;
 }
 
@@ -176,9 +152,9 @@ h3.dateAndTime:hover {
   color: rgb(10, 10, 142);
   overflow: hidden;
   text-shadow: 1px 1px 1px #d6cdec;
-  margin-top: 8%;
+  margin-top: 6%;
   padding-top: 4%;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bold;
 }
 
@@ -192,7 +168,7 @@ li.fullTime {
   text-align: right;
 }
 
-#search-text-input {
+.search-text-input {
   color: rgb(10, 12, 126);
   display: flex;
   align-items: center;
@@ -204,12 +180,11 @@ li.fullTime {
   border: 2px solid rgb(117, 119, 213);
   padding: 5px 8px 5px 8px;
   border-radius: 40px;
-  max-width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
   box-shadow: 1px 1px 1px #5a77d5;
 }
 
-#search-text-input:hover {
+.search-text-input:hover {
   color: rgb(33, 10, 126);
   display: flex;
   align-items: center;
@@ -221,58 +196,54 @@ li.fullTime {
   border: 2px solid rgb(117, 119, 213);
   padding: 8px 8px 8px 8px;
   border-radius: 40px;
-  max-width: 100%;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 0.7em;
   box-shadow: 1px 1px 1px #5a77d5;
 }
 
 .currentButton {
   display: block;
   outline: none;
+  margin-left: 10%;
   background-color: #4c53d4;
   background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
-  max-width: 100%;
   color: #fff;
   text-align: center;
   position: static;
-  padding: 5px 5px 5px 5px;
+  padding: 2px 2px 2px 2px;
   border-radius: 50px;
   border: 1px solid #282ea8;
   box-shadow: 1px 1px 1px #5a77d5;
-  max-width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .currentButton:hover {
   display: block;
   outline: none;
+  margin-left: 10%;
   text-align: center;
   color: #fff;
   position: static;
-  padding: 5px 5px 5px 5px;
+  padding: 2px 2px 2px 2px;
   border-radius: 50px;
   background-color: #f4af48;
   border: 2px solid rgb(224, 126, 22);
-  max-width: 100%;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 input.inputButton {
   display: block;
   outline: none;
-  background-color: #4c53d4;
   background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
   max-width: 100%;
   color: #fff;
   text-align: center;
   position: static;
-  padding: 5px 15px 5px 15px;
-  border-radius: 20px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 15px;
   border: 1px solid #282ea8;
   box-shadow: 1px 1px 1px #5a77d5;
-  max-width: 100%;
   font-size: 0.8em;
 }
 
@@ -282,11 +253,10 @@ input.inputButton:hover {
   color: #fff;
   text-align: center;
   position: static;
-  padding: 5px 15px 5px 15px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 25px;
   box-shadow: 1px 1px 1px #5a77d5;
-  max-width: 100%;
   font-size: 0.8em;
-  border-radius: 40px;
   background-color: #e7fe8d;
   border: 2px solid rgb(89, 224, 22);
   cursor: pointer;
@@ -295,45 +265,46 @@ input.inputButton:hover {
 .today {
   color: rgb(27, 27, 176);
   text-align: left;
-  font-size: 1.65em;
-  margin-left: 20%;
+  font-size: 0.7em;
+  margin-left: 10%;
   font-weight: bold;
 }
 
 button.CorF {
   text-align: center;
-  padding: 5px 10px 5px 10px;
-  border-radius: 35px;
+  margin-right: 5%;
+  padding: 2px 2px 2px 2px;
+  border-radius: 45px;
   color: #fff;
   display: block;
   outline: none;
   background-color: #4c53d4;
   background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
-  max-width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 button.CorF:hover {
   text-align: center;
+  margin-right: 5%;
   background-color: #90d214;
   color: #fff;
   border: 2px solid rgb(233, 255, 38);
-  border-radius: 35px;
+  border-radius: 25px;
   cursor: pointer;
   border: 2px solid rgb(217, 47, 255);
-  padding: 5px 10px 5px 10px;
+  padding: 2px 2px 2px 2px;
   display: block;
   outline: none;
   background-color: #ff6bf3;
   text-align: center;
   position: static;
   max-width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .currentTemp {
   text-transform: capitalize;
-  font-size: 1.3em;
+  font-size: 0.8em;
   text-align: left;
   margin-bottom: 1%;
   padding-bottom: 1%;
@@ -347,14 +318,14 @@ li.feelsLike {
 .CorFLetter {
   text-align: left;
   color: navy;
-  font-size: 1.3em;
+  font-size: 0.8em;
   padding-bottom: 2%;
 }
 
 .currentDescription {
   text-align: right;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.8em;
   color: navy;
   max-width: 100%;
 }
@@ -362,7 +333,7 @@ li.feelsLike {
 span.currentHumidity {
   text-align: right;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.8em;
   color: navy;
   max-width: 100%;
 }
@@ -370,7 +341,7 @@ span.currentHumidity {
 span.currentWind {
   text-align: right;
   align-items: center;
-  font-size: 1em;
+  font-size: 0.8em;
   color: navy;
   max-width: 100%;
 }
@@ -378,6 +349,7 @@ span.currentWind {
 h3.current {
   display: flex;
   align-items: center;
+  margin-left: 5%;
   flex-wrap: wrap;
   text-align: center;
   position: relative;
@@ -385,7 +357,9 @@ h3.current {
   background-color: #bfd6ff;
   border: 2px solid rgb(117, 119, 213);
   border-radius: 4px;
-  font-size: 1.2em;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
@@ -393,12 +367,15 @@ h3.current:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 5%;
   text-align: center;
   color: navy;
   position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: #d2e3ff;
   border-radius: 20px;
-  font-size: 1.25em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 
@@ -417,7 +394,7 @@ img {
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 5% 5% 5% 5%;
 }
 
@@ -426,7 +403,7 @@ img {
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 2% 2% 2% 2%;
   font-weight: bold;
 }
@@ -440,9 +417,11 @@ h4.city {
   border: 2px solid rgb(117, 119, 213);
   border-radius: 4px;
   flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
   position: static;
   overflow: hidden;
-  font-size: 1.6em;
+  font-size: 0.8em;
   color: navy;
   padding: 10% 10% 10% 10%;
   font-weight: bold;
@@ -456,8 +435,10 @@ h4.city:hover {
   background-color: #d2e3ff;
   border-radius: 20px;
   flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
   overflow: hidden;
-  font-size: 1.65em;
+  font-size: 0.8em;
   color: navy;
   padding: 10% 10% 10% 10%;
   font-weight: bold;
@@ -480,7 +461,7 @@ h4.city:hover {
 .foot {
   display: block;
   color: navy;
-  font-size: 16px;
+  font-size: 0.6em;
   text-align: center;
   align-items: center;
   margin-left: 8%;

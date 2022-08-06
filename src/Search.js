@@ -19,14 +19,18 @@ export default function Search() {
   }
 
   return (
-    <form onSubmit={handleSearched}>
-      <input
-        type="search"
-        placeholder="Enter a city"
-        onChange={updateSearched}
-      />
-      <input type="submit" value="Search" />
-      <h5>{searched}</h5>
-    </form>
+    <div className="searchForm">
+      <form onSubmit={handleSearched}>
+        <input
+          className="search-text-input"
+          type="search"
+          placeholder="Enter a city"
+          autoFocus="on"
+          onChange={updateSearched}
+        />
+        <input className="inputButton" type="submit" value="Search" />
+        <h5>{searched}</h5>
+      </form>
+    </div>
   );
 }
