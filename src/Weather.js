@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import Search from "./Search";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -50,9 +51,12 @@ export default function Weather(props) {
               <div className="col-sm-5 align-self-center">
                 <h3 className="dateAndTime">
                   <ul>
-                    <li>{weatherData.date}</li>
                     <li>
-                      {weatherData.day} {weatherData.time}
+                      <FormattedDate date={weatherData.date} />
+                    </li>
+                    <li>{weatherData.date.getDate()}</li>
+                    <li>
+                      {weatherData.date.getDay()} {weatherData.date.getTime()}
                     </li>
                   </ul>
                 </h3>
