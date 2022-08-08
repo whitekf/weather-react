@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherDisplayed(props) {
   return (
@@ -38,11 +39,15 @@ export default function WeatherDisplayed(props) {
               </li>
             </ul>
             <div className="align-self-center curWeatherIcon">
-              <img
+              {/* <div className="float-left"> */}
+              <div className="align-center">
+                <WeatherIcon code={props.data.icon} />
+                {/* <img
                 src={props.data.iconUrl}
                 alt={props.data.description}
                 width="102"
-              />
+              /> */}
+              </div>
             </div>
           </h3>
         </div>

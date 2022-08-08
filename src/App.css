@@ -385,8 +385,8 @@ img {
 }
 
 .curWeatherIcon {
-  display: flex;
-  padding: 5% 5% 5% 5%;
+  margin: 0 auto;
+  padding: 2% 2% 2% 2%;
 }
 
 #currentIcon {
