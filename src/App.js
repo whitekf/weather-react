@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Weather defaultCity="Madrid" />
+        <Weather defaultCity="New York" />
 
         <footer className="foot align-self-center">
           Designed and Coded by

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Search from "./Search";
+// import Search from "./Search";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 
@@ -10,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -18,26 +19,35 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      icon: "http://openweathermap.org/img/wn/10d@2x.png",
       wind: response.data.wind.speed,
       city: response.data.name,
     });
+    console.log("in handleResponse");
   }
 
-  //   function handleSubmit(event) {
-  //     event.preventDefault();
-  //     searched();
-  //   }
+  function handleSubmit(event) {
+    event.preventDefault();
+    searched();
+    console.log("in handleSubmit");
+  }
 
   function handleCityChange(event) {
     setCity(event.target.value);
+    console.log("in handleCityChange");
+    console.log("city is " + city + " " +{ city });
   }
 
-  //   function searched() {
-  // const apiKey = `cfb59eb36c77de781466cc12dfc585a8`;
-  // let units = "imperial";
-  // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
-  // axios.get(apiUrl).then(handleResponse);
-  //   }
+  function searched() {
+    const apiKey = `15ed5d92f7b4157fdab57b1053c46052`;
+    let units = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+    console.log("in searched");
+    console.log(units);
+    console.log(apiUrl);
+    console.log(apiKey);
+  }
 
   if (weatherData.ready) {
     return (
@@ -54,10 +64,10 @@ export default function Weather(props) {
                     <li>
                       <FormattedDate date={weatherData.date} />
                     </li>
-                    <li>{weatherData.date.getDate()}</li>
+                    {/* <li>{weatherData.date.getDate()}</li>
                     <li>
                       {weatherData.date.getDay()} {weatherData.date.getTime()}
-                    </li>
+                    </li> */}
                   </ul>
                 </h3>
               </div>
@@ -69,8 +79,7 @@ export default function Weather(props) {
               </div>
               <div className="col-6">
                 <div className="searchForm">
-                  <form>
-                    {/* <form onSubmit={handleSubmit}> */}
+                  <form onSubmit={handleSubmit}>
                     <input
                       className="search-text-input"
                       type="search"
@@ -85,7 +94,7 @@ export default function Weather(props) {
                     />
                   </form>
                 </div>
-                <Search />
+                {/* <Search /> */}
               </div>
               <div className="col-2">
                 <button className="CorF">°C or [°F]</button>
@@ -149,12 +158,12 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    // searched();
-    const apiKey = `cfb59eb36c77de781466cc12dfc585a8`;
-    let units = "imperial";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
+    searched();
 
-    return "Loading...";
+    return (
+      <h5>
+        "In else statement - ready must be false...still" `Loading... {city}`;
+      </h5>
+    );
   }
 }
