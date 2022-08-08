@@ -138,8 +138,8 @@ h3.dateAndTime {
   text-align: right;
   overflow: hidden;
   color: rgb(10, 10, 142);
-  margin-top: 2%;
-  padding-top: 4%;
+  margin-top: 6%;
+  padding-top: 7%;
   font-size: 0.7em;
   font-weight: bold;
 }
@@ -155,7 +155,7 @@ h3.dateAndTime:hover {
   overflow: hidden;
   text-shadow: 1px 1px 1px #d6cdec;
   margin-top: 6%;
-  padding-top: 4%;
+  padding-top: 7%;
   font-size: 0.7em;
   font-weight: bold;
 }
@@ -212,11 +212,11 @@ li.fullTime {
   color: #fff;
   text-align: center;
   position: static;
-  padding: 2px 2px 2px 2px;
-  border-radius: 50px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 10px;
   border: 1px solid #282ea8;
   box-shadow: 1px 1px 1px #5a77d5;
-  font-size: 0.7em;
+  font-size: 0.6em;
 }
 
 .currentButton:hover {
@@ -226,27 +226,25 @@ li.fullTime {
   text-align: center;
   color: #fff;
   position: static;
-  padding: 2px 2px 2px 2px;
-  border-radius: 50px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 15px;
   background-color: #f4af48;
   border: 2px solid rgb(224, 126, 22);
   cursor: pointer;
-  font-size: 0.7em;
+  font-size: 0.6em;
 }
 
 input.inputButton {
-  display: block;
-  outline: none;
+  display: inline;
+  margin-left: 70%;
   background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
-  max-width: 100%;
   color: #fff;
   text-align: center;
-  position: static;
-  padding: 2px 2px 2px 2px;
-  border-radius: 15px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 10px;
   border: 1px solid #282ea8;
   box-shadow: 1px 1px 1px #5a77d5;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 input.inputButton:hover {
@@ -255,10 +253,10 @@ input.inputButton:hover {
   color: #fff;
   text-align: center;
   position: static;
-  padding: 2px 2px 2px 2px;
-  border-radius: 25px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 15px;
   box-shadow: 1px 1px 1px #5a77d5;
-  font-size: 0.8em;
+  font-size: 0.6em;
   background-color: #e7fe8d;
   border: 2px solid rgb(89, 224, 22);
   cursor: pointer;
@@ -267,41 +265,9 @@ input.inputButton:hover {
 .today {
   color: rgb(27, 27, 176);
   text-align: left;
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-left: 10%;
   font-weight: bold;
-}
-
-button.CorF {
-  text-align: center;
-  margin-right: 5%;
-  padding: 2px 2px 2px 2px;
-  border-radius: 45px;
-  color: #fff;
-  display: block;
-  outline: none;
-  background-color: #4c53d4;
-  background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
-  font-size: 0.7em;
-}
-
-button.CorF:hover {
-  text-align: center;
-  margin-right: 5%;
-  background-color: #90d214;
-  color: #fff;
-  border: 2px solid rgb(233, 255, 38);
-  border-radius: 25px;
-  cursor: pointer;
-  border: 2px solid rgb(217, 47, 255);
-  padding: 2px 2px 2px 2px;
-  display: block;
-  outline: none;
-  background-color: #ff6bf3;
-  text-align: center;
-  position: static;
-  max-width: 100%;
-  font-size: 0.7em;
 }
 
 .currentTemp {
@@ -359,7 +325,7 @@ h3.current {
   color: navy;
   background-color: #bfd6ff;
   border: 2px solid rgb(117, 119, 213);
-  border-radius: 4px;
+  border-radius: 8px;
   margin-left: 5%;
   margin-right: 5%;
   font-size: 0.8em;
@@ -389,7 +355,6 @@ img {
 
 .curWeatherIcon {
   margin: 0 auto;
-  padding-bottom: 5%;
 }
 
 #currentIcon {
@@ -418,10 +383,11 @@ h4.city {
   text-align: center;
   background-color: #bfd6ff;
   border: 2px solid rgb(117, 119, 213);
-  border-radius: 4px;
+  border-radius: 8px;
   flex-wrap: wrap;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 6%;
   position: static;
   overflow: hidden;
   font-size: 0.8em;
@@ -440,6 +406,7 @@ h4.city:hover {
   flex-wrap: wrap;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 6%;
   overflow: hidden;
   font-size: 0.8em;
   color: navy;

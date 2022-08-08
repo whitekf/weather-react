@@ -72,7 +72,7 @@ export default function Weather(props) {
               <div className="col-4">
                 <button className="currentButton">Current Location</button>
               </div>
-              <div className="col-6">
+              <div className="col-7">
                 <div className="searchForm">
                   <form onSubmit={handleSubmit}>
                     <input
@@ -90,9 +90,6 @@ export default function Weather(props) {
                   </form>
                 </div>
                 {/* <Search /> */}
-              </div>
-              <div className="col-2">
-                <button className="CorF">°C or [°F]</button>
               </div>
             </div>
 

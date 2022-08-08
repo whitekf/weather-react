@@ -25,7 +25,6 @@ export default function WeatherDisplayed(props) {
                 {/* Moved into a new component called WeatherConversion  */}
                 {/* <span className="currentTemp"> {props.data.temperature} </span>
                 <span className="CorFLetter">°F </span> */}
-                <br />
                 Currently:{" "}
                 <span className="currentDescription align-self-center">
                   {props.data.description}
@@ -42,7 +41,7 @@ export default function WeatherDisplayed(props) {
             <div className="align-self-center curWeatherIcon">
               {/* <div className="float-left"> */}
               <div className="align-center">
-                <WeatherIcon code={props.data.icon} />
+                {/* <WeatherIcon code={props.data.icon} /> */}
                 {/* <img
                 src={props.data.iconUrl}
                 alt={props.data.description}
@@ -52,7 +51,10 @@ export default function WeatherDisplayed(props) {
             </div>
           </h3>
         </div>
+
         <div className="col-sm-4 cityBox align-self-center">
+          <WeatherIcon code={props.data.icon} />
+          <br></br>
           <h4 className="city"> {props.data.city} </h4>
         </div>
       </div>
