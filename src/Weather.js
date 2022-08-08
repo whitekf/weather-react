@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 // import Search from "./Search";
-import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import WeatherDisplayed from "./WeatherDisplayed";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const units = "imperial";
 
   function handleResponse(response) {
     console.log(response.data);
@@ -23,7 +24,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
     });
-    console.log("in handleResponse");
+    console.log("in handleResponse ^^^ data");
   }
 
   function handleSubmit(event) {
@@ -35,18 +36,15 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
     console.log("in handleCityChange");
-    console.log("city is " + city + " " + { city });
+    console.log("city is " + city);
   }
 
-  function searched() {
+  function searched(event) {
     const apiKey = `15ed5d92f7b4157fdab57b1053c46052`;
-    let units = "imperial";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
+    //let units = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
     console.log("in searched");
-    console.log(units);
-    console.log(apiUrl);
-    console.log(apiKey);
   }
 
   if (weatherData.ready) {
@@ -64,10 +62,6 @@ export default function Weather(props) {
                     <li>
                       <FormattedDate date={weatherData.date} />
                     </li>
-                    {/* <li>{weatherData.date.getDate()}</li>
-                    <li>
-                      {weatherData.date.getDay()} {weatherData.date.getTime()}
-                    </li> */}
                   </ul>
                 </h3>
               </div>
@@ -101,58 +95,9 @@ export default function Weather(props) {
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-4">
-                <div className="today">Today:</div>
-              </div>
-              <div className="col-8"></div>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-7 align-self-center">
-                <h3 className="current">
-                  <ul>
-                    <li>
-                      Current:
-                      <span className="currentTemp">
-                        {" "}
-                        {weatherData.temperature}{" "}
-                      </span>
-                      <span className="CorFLetter">°F </span>
-                      <br />
-                      <span className="currentDescription align-self-center">
-                        {weatherData.description}
-                      </span>
-                    </li>
-                    <li>
-                      Humidity:
-                      <span className="currentHumidity">
-                        {" "}
-                        {weatherData.humidity}%{" "}
-                      </span>
-                    </li>
-                    <li>
-                      Wind:
-                      <span className="currentWind">
-                        {" "}
-                        {weatherData.wind}mph{" "}
-                      </span>
-                      <span className="currentWindUnits"> </span>
-                    </li>
-                  </ul>
-                  <div className="align-self-center curWeatherIcon">
-                    <img
-                      src={weatherData.icon}
-                      alt={weatherData.description}
-                      width="102"
-                    />
-                  </div>
-                </h3>
-              </div>
-              <div className="col-sm-4 cityBox align-self-center">
-                <h4 className="city"> {weatherData.city} </h4>
-              </div>
-            </div>
+            <WeatherDisplayed data={weatherData} />
+            {/* <WeatherDisplayed newCity={city} /> */}
+            {/* <WeatherDisplayed aCity={props.defaultCity} /> */}
           </div>
         </div>
       </div>
