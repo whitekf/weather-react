@@ -4,7 +4,6 @@ import "./Weather.css";
 // import Search from "./Search";
 import FormattedDate from "./FormattedDate";
 import WeatherDisplayed from "./WeatherDisplayed";
-import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
