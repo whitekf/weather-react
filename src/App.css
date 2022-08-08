@@ -35,18 +35,13 @@ body {
     #b8dcff 48%,
     #6bbbff 100%
   );
-  padding: 0% 2% 0% 2%;
 }
 
 .centerBox {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  box-shadow: 5px 5px 155px 15px rgb(237, 243, 255);
   background-color: #add1fe;
   border-radius: 4%;
   display: block;
-  margin-top: 1%;
-  margin-bottom: 1%;
   background-image: linear-gradient(
     -225deg,
     #5d9fff 0%,
@@ -193,10 +188,9 @@ li.fullTime {
   flex-wrap: wrap;
   text-align: center;
   position: relative;
-  outline: none;
   background-color: #ffffff;
-  border: 2px solid rgb(117, 119, 213);
-  padding: 8px 8px 8px 8px;
+  border: 2px solid rgb(85, 88, 249);
+  padding: 5px 8px 5px 8px;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.7em;
@@ -248,8 +242,7 @@ input.inputButton {
 }
 
 input.inputButton:hover {
-  display: block;
-  outline: none;
+  display: inline;
   color: #fff;
   text-align: center;
   position: static;
@@ -258,6 +251,7 @@ input.inputButton:hover {
   box-shadow: 1px 1px 1px #5a77d5;
   font-size: 0.6em;
   background-color: #e7fe8d;
+  margin-left: 70%;
   border: 2px solid rgb(89, 224, 22);
   cursor: pointer;
 }

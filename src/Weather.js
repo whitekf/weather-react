@@ -47,6 +47,44 @@ export default function Weather(props) {
     console.log("in searched");
   }
 
+  //   // function used when user clicks "Current Location" button to show city/temp
+  //   function searchCurrentCity(position) {
+  //     let apiKey = "15ed5d92f7b4157fdab57b1053c46052";
+  //     // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}`;
+  //     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  //     axios.get(`${apiUrl}&appid=${apiKey}`).then(<WeatherDisplayed />);
+  //   }
+
+  //   // Function to show CURRENT location information AND calls to display city
+  //   function showPosition(position) {
+  //     console.log("!!!!!! Entered showPosition");
+  //     let latitude = position.coords.latitude;
+  //     let longitude = position.coords.longitude;
+  //     let apiKey = "15ed5d92f7b4157fdab57b1053c46052";
+  //     let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather`;
+  //     let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  //     axios.get(`${apiUrl}&appid=${apiKey}`).then(<WeatherDisplayed />);
+  //     displaySearchedCity(position);
+  //     navigator.geolocation.getCurrentPosition(searchCurrentCity);
+  //     console.log("%%%%%% Leaving showPosition");
+  //   }
+
+  //   function displaySearchedCity(position) {
+  //     console.log("!!!!!! Entered displaySearchedCity");
+  //     // event.preventDefault();
+  //     setCity(position.name);
+  //     console.log(`@@@@ Current position details ${city}`);
+  //     console.log("%%%%%% Leaving  displaySearchedCity");
+  //   }
+
+  //   // calls showPosition
+  //   function getCurrentPosition() {
+  //     console.log("!!!!!! Entered getCurrentPosition");
+  //     navigator.geolocation.getCurrentPosition(showPosition);
+
+  //     console.log("%%%%%% Leaving  getCurrentPosition");
+  //   }
+
   if (weatherData.ready) {
     return (
       <div>
@@ -69,7 +107,9 @@ export default function Weather(props) {
 
             <div className="row">
               <div className="col-4">
-                <button className="currentButton">Current Location</button>
+                {/* <button className="currentButton" onClick={getCurrentPosition}>
+                  Current Location
+                </button> */}
               </div>
               <div className="col-7">
                 <div className="searchForm">
