@@ -67,14 +67,14 @@
 }
 
 .Weather canvas {
-  box-shadow: 5px 5px 5px rgb(111, 150, 255);
+  box-shadow: 5px 5px 25px 15px rgb(111, 150, 255);
   border-radius: 50px;
   padding: 10px 10px 10px 10px;
   margin-bottom: 5%;
 }
 
 .Weather canvas:hover {
-  box-shadow: 5px 5px 5px #d382ff;
+  box-shadow: 5px 5px 25px 15px #c182ff;
   border-radius: 50px;
   padding: 10px 10px 10px 10px;
   margin-bottom: 5%;

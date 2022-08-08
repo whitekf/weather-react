@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherConversion from "./WeatherConversion";
 
 export default function WeatherDisplayed(props) {
   return (
@@ -17,10 +18,15 @@ export default function WeatherDisplayed(props) {
           <h3 className="current">
             <ul>
               <li>
-                Current:
-                <span className="currentTemp"> {props.data.temperature} </span>
-                <span className="CorFLetter">°F </span>
+                <WeatherConversion
+                  fTemp={props.data.temperature}
+                  theWind={props.data.wind}
+                />
+                {/* Moved into a new component called WeatherConversion  */}
+                {/* <span className="currentTemp"> {props.data.temperature} </span>
+                <span className="CorFLetter">°F </span> */}
                 <br />
+                Currently:{" "}
                 <span className="currentDescription align-self-center">
                   {props.data.description}
                 </span>
@@ -31,11 +37,6 @@ export default function WeatherDisplayed(props) {
                   {" "}
                   {props.data.humidity}%{" "}
                 </span>
-              </li>
-              <li>
-                Wind:
-                <span className="currentWind"> {props.data.wind}mph </span>
-                <span className="currentWindUnits"> </span>
               </li>
             </ul>
             <div className="align-self-center curWeatherIcon">
