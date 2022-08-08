@@ -13,11 +13,12 @@ export default function FormattedDate(props) {
   ];
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();
+  let ampm = "am";
+  if (hours > 12) {
+    ampm = "pm";
+  }
   if (hours > 12) {
     hours = hours % 12;
-  }
-  if (hours < 10) {
-    hours = `0${hours}`;
   }
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
@@ -44,8 +45,9 @@ export default function FormattedDate(props) {
   return (
     <div>
       {day} {hours}:{minutes}
+      {ampm}
       <br></br>
-      {month} {dateNum} {year}
+      {month} {dateNum}, {year}
     </div>
   );
 }
