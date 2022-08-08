@@ -19,8 +19,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
-      icon: "http://openweathermap.org/img/wn/10d@2x.png",
+      //icon: response.data.weather[0].icon,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
     });
@@ -105,10 +105,6 @@ export default function Weather(props) {
   } else {
     searched();
 
-    return (
-      <h5>
-        "In else statement - ready must be false...still" `Loading... {city}`;
-      </h5>
-    );
+    return <h5>"Loading...`;</h5>;
   }
 }

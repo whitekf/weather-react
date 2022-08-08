@@ -39,7 +39,7 @@ export default function WeatherDisplayed(props) {
             </ul>
             <div className="align-self-center curWeatherIcon">
               <img
-                src={props.data.icon}
+                src={props.data.iconUrl}
                 alt={props.data.description}
                 width="102"
               />
