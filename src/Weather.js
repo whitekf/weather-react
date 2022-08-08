@@ -14,13 +14,13 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       icon: "http://openweathermap.org/img/wn/10d@2x.png",
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       city: response.data.name,
     });
     console.log("in handleResponse");
@@ -35,7 +35,7 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
     console.log("in handleCityChange");
-    console.log("city is " + city + " " +{ city });
+    console.log("city is " + city + " " + { city });
   }
 
   function searched() {

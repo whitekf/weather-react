@@ -20,19 +20,32 @@ export default function FormattedDate(props) {
     hours = `0${hours}`;
   }
   let minutes = props.date.getMinutes();
-  if (minutes > 60) {
-    minutes = minutes % 60;
-  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "Decemeber",
+  ];
+  let month = months[props.date.getMonth()];
   let year = props.date.getFullYear();
+  let dateNum = props.date.getDate();
 
   return (
     <div>
       {day} {hours}:{minutes}
       <br></br>
-      {year}
+      {month} {dateNum} {year}
     </div>
   );
 }
