@@ -9,7 +9,7 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const units = "imperial";
+  let units = "imperial";
 
   function handleResponse(response) {
     console.log(response.data);
@@ -137,7 +137,18 @@ export default function Weather(props) {
             <WeatherDisplayed data={weatherData} />
             {/* <WeatherDisplayed newCity={city} /> */}
             {/* <WeatherDisplayed aCity={props.defaultCity} /> */}
-            <WeatherForecast coordinates={weatherData.coordinates} />
+            <div className="row">
+              <div className="col separator">
+                {" "}
+                {
+                  "weather anywhere. weather anywhere. weather anywhere. weather anywhere. weather anywhere."
+                }{" "}
+              </div>
+            </div>
+            <WeatherForecast
+              coordinates={weatherData.coordinates}
+              unit={units}
+            />
           </div>
         </div>
       </div>

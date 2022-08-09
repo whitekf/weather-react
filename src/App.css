@@ -133,8 +133,8 @@ h3.dateAndTime {
   text-align: right;
   overflow: hidden;
   color: rgb(10, 10, 142);
-  margin-top: 6%;
-  padding-top: 7%;
+  margin-top: 3%;
+  padding-top: 3%;
   font-size: 0.7em;
   font-weight: bold;
 }
@@ -149,8 +149,8 @@ h3.dateAndTime:hover {
   color: rgb(10, 10, 142);
   overflow: hidden;
   text-shadow: 1px 1px 1px #d6cdec;
-  margin-top: 6%;
-  padding-top: 7%;
+  margin-top: 3%;
+  padding-top: 3%;
   font-size: 0.7em;
   font-weight: bold;
 }
@@ -357,7 +357,7 @@ img {
   text-align: center;
   flex-wrap: wrap;
   font-size: 1.5em;
-  padding: 5% 5% 5% 5%;
+  padding: 2% 2% 2% 2%;
 }
 
 .weatherIcon {
