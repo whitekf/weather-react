@@ -53,7 +53,7 @@ export default function WeatherDisplayed(props) {
         </div>
 
         <div className="col-sm-4 cityBox align-self-center">
-          <WeatherIcon code={props.data.icon} />
+          <WeatherIcon code={props.data.icon} size={64}/>
           <br></br>
           <h4 className="city"> {props.data.city} </h4>
         </div>

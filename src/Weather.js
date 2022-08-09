@@ -4,6 +4,7 @@ import "./Weather.css";
 // import Search from "./Search";
 import FormattedDate from "./FormattedDate";
 import WeatherDisplayed from "./WeatherDisplayed";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,6 +15,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
@@ -135,6 +137,7 @@ export default function Weather(props) {
             <WeatherDisplayed data={weatherData} />
             {/* <WeatherDisplayed newCity={city} /> */}
             {/* <WeatherDisplayed aCity={props.defaultCity} /> */}
+            <WeatherForecast coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>

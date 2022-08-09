@@ -36,15 +36,17 @@ export default function WeatherConversion(props) {
         <span className="CorFLetter">
           <a href="/">°F</a> | °C{" "}
         </span>
-        <li>
-          Wind:
-          <span className="currentWind">
-            {" "}
-            {Math.round(kmHr)}
-            {"kph"}{" "}
-          </span>
-          <span className="currentWindUnits"> </span>
-        </li>
+        <ul>
+          <div>
+            Wind:
+            <span className="currentWind">
+              {" "}
+              {Math.round(kmHr)}
+              {"kph"}{" "}
+            </span>
+            <span className="currentWindUnits"> </span>
+          </div>
+        </ul>
       </div>
     );
   }
