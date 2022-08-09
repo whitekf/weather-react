@@ -138,12 +138,12 @@ export default function Weather(props) {
             {/* <WeatherDisplayed newCity={city} /> */}
             {/* <WeatherDisplayed aCity={props.defaultCity} /> */}
             <div className="row">
-              <div className="col separator">
+              {/* <div className="col separator">
                 {" "}
                 {
                   "weather anywhere. weather anywhere. weather anywhere. weather anywhere. weather anywhere."
                 }{" "}
-              </div>
+              </div> */}
             </div>
             <WeatherForecast
               coordinates={weatherData.coordinates}
