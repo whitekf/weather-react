@@ -11,9 +11,9 @@ function App() {
         <Weather defaultCity="New York" />
 
         <footer className="foot align-self-center">
-          Designed and Coded by
-          <a href="https://kassiewhite.netlify.app/index.html">Kassie White</a>.
-          {"  "}
+          Designed and Coded by{" "}
+          <a href="https://kassiewhite.netlify.app/index.html">Kassie White </a>
+          .{"  "}
           <a
             href="https://github.com/whitekf/weather-react"
             target="_blank"

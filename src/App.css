@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #80a5ef;
+  background-color: #578c88;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,22 +25,22 @@ body {
   background-image: linear-gradient(-225deg, #7de2fc 0%, #b9b6e5 100%);
   background-image: linear-gradient(
     -225deg,
-    #558ee4 0%,
+    #6682ac 0%,
     #5085ba 48%,
     #7085d7 100%
   );
   background-image: linear-gradient(
     -225deg,
-    #5d9fff 0%,
-    #b8dcff 48%,
-    #6bbbff 100%
+    #586e8f 0%,
+    #518d83 48%,
+    #49647c 100%
   );
 }
 
 .centerBox {
   box-shadow: 5px 5px 155px 15px rgb(237, 243, 255);
   background-color: #add1fe;
-  border-radius: 4%;
+  border-radius: 2%;
   display: block;
   background-image: linear-gradient(
     -225deg,
@@ -48,13 +48,28 @@ body {
     #b8dcff 48%,
     #6bbbff 100%
   );
+  background-image: linear-gradient(
+    -225deg,
+    rgb(102, 156, 159) 20%,
+    rgb(106, 168, 167) 48%,
+    rgb(124, 171, 176) 70%
+  );
+  border: 1px solid darkslategrey;
+}
+
+a:visited {
+  color: rgb(109, 207, 195);
+}
+
+.foot a:visited {
+  color: rgb(31, 84, 164);
 }
 
 li {
   list-style: none;
   text-transform: capitalize;
   font-family: Helvetica;
-  color: navy;
+  color: white;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -67,10 +82,11 @@ li {
   position: sticky;
   overflow: hidden;
   text-align: left;
-  font-size: 1.2em;
+  font-size: 1.3em;
   padding-left: 5%;
   padding-top: 1%;
-  color: rgb(10, 10, 142);
+  color: darkslategray;
+  text-shadow: 2px 1px 10px rgb(159, 207, 193);
   font-weight: bold;
 }
 
@@ -84,7 +100,7 @@ li {
   font-size: 1.25em;
   padding-left: 3%;
   padding-top: 1%;
-  color: navy;
+  color: darkslategray;
   font-weight: bold;
   transition: ease-in-out;
 }
@@ -166,7 +182,7 @@ li.fullTime {
 }
 
 .search-text-input {
-  color: rgb(10, 12, 126);
+  color: darkslategray;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -174,27 +190,27 @@ li.fullTime {
   position: relative;
   outline: none;
   background-color: #ffffff;
-  border: 2px solid rgb(117, 119, 213);
+  border: 2px solid rgb(58, 113, 101);
   padding: 5px 8px 5px 8px;
   border-radius: 40px;
   font-size: 0.7em;
-  box-shadow: 1px 1px 1px #5a77d5;
+  box-shadow: 1px 1px 1px #467d6e;
 }
 
 .search-text-input:hover {
-  color: rgb(33, 10, 126);
+  color: darkslategray;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
   position: relative;
   background-color: #ffffff;
-  border: 2px solid rgb(85, 88, 249);
+  border: 2px solid rgb(58, 113, 101);
   padding: 5px 8px 5px 8px;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.7em;
-  box-shadow: 1px 1px 1px #5a77d5;
+  box-shadow: 1px 1px 1px #467d6e;
 }
 
 .currentButton {
@@ -231,13 +247,13 @@ li.fullTime {
 input.inputButton {
   display: inline;
   margin-left: 70%;
-  background-image: linear-gradient(to top, #20238a 0%, #2d53a4 100%);
+  background-image: linear-gradient(to top, #3f6f65 0%, #3c6b63 100%);
   color: #fff;
   text-align: center;
   padding: 4px 4px 4px 4px;
   border-radius: 10px;
-  border: 1px solid #282ea8;
-  box-shadow: 1px 1px 1px #5a77d5;
+  border: 1px solid #276262;
+  box-shadow: 1px 2px 3px #405e5d;
   font-size: 0.6em;
 }
 
@@ -248,7 +264,7 @@ input.inputButton:hover {
   position: static;
   padding: 4px 4px 4px 4px;
   border-radius: 15px;
-  box-shadow: 1px 1px 1px #5a77d5;
+  box-shadow: 1px 2px 3px #405e5d;
   font-size: 0.6em;
   background-color: #e7fe8d;
   margin-left: 70%;
@@ -257,7 +273,7 @@ input.inputButton:hover {
 }
 
 .today {
-  color: rgb(27, 27, 176);
+  color: rgb(7, 69, 56);
   text-align: left;
   font-size: 0.8em;
   margin-left: 10%;
@@ -271,7 +287,7 @@ input.inputButton:hover {
   margin-top: 1%;
   margin-bottom: 1%;
   padding-bottom: 1%;
-  color: navy;
+  color: white;
 }
 
 li.feelsLike {
@@ -280,8 +296,9 @@ li.feelsLike {
 
 .CorFLetter {
   text-align: left;
-  color: navy;
-  font-size: 1em;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 400;
   padding-bottom: 2%;
 }
 
@@ -289,24 +306,27 @@ li.feelsLike {
   text-align: right;
   align-items: center;
   font-size: 1em;
-  color: navy;
+  color: white;
   max-width: 100%;
+  opacity: 0.8;
 }
 
 span.currentHumidity {
   text-align: right;
   align-items: center;
   font-size: 1em;
-  color: navy;
+  color: white;
   max-width: 100%;
+  opacity: 0.8;
 }
 
 span.currentWind {
   text-align: right;
   align-items: center;
   font-size: 1em;
-  color: navy;
+  color: white;
   max-width: 100%;
+  opacity: 0.8;
 }
 
 h3.current {
@@ -316,9 +336,15 @@ h3.current {
   flex-wrap: wrap;
   text-align: center;
   position: relative;
-  color: navy;
-  background-color: #bfd6ff;
-  border: 2px solid rgb(117, 119, 213);
+  color: white;
+  background-color: #32614c;
+  background-image: linear-gradient(
+    -225deg,
+    #3b7465 27%,
+    #335e51 100%,
+    #3c695d 42%
+  );
+  border: 2px solid rgb(80, 148, 149);
   border-radius: 8px;
   margin-left: 5%;
   margin-right: 5%;
@@ -332,11 +358,12 @@ h3.current:hover {
   flex-wrap: wrap;
   margin-left: 5%;
   text-align: center;
-  color: navy;
+  color: darkslategray;
   position: relative;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #d2e3ff;
+  background-color: #32614c;
+  border: 2px solid rgb(80, 148, 149);
   border-radius: 20px;
   font-size: 0.8em;
   font-weight: bold;
@@ -375,8 +402,14 @@ h4.city {
   text-transform: capitalize;
   align-items: center;
   text-align: center;
-  background-color: #bfd6ff;
-  border: 2px solid rgb(117, 119, 213);
+  background-color: #32614c;
+  background-image: linear-gradient(
+    -225deg,
+    #3b7465 27%,
+    #335e51 100%,
+    #3c695d 42%
+  );
+  border: 2px solid rgb(80, 148, 149);
   border-radius: 8px;
   flex-wrap: wrap;
   margin-left: 5%;
@@ -385,7 +418,8 @@ h4.city {
   position: static;
   overflow: hidden;
   font-size: 0.8em;
-  color: navy;
+  color: "darkslategray";
+  color: white;
   padding: 10% 10% 10% 10%;
   font-weight: bold;
 }
@@ -395,7 +429,8 @@ h4.city:hover {
   text-transform: capitalize;
   text-align: center;
   align-items: center;
-  background-color: #d2e3ff;
+  background-color: #32614c;
+  border: 2px solid rgb(80, 148, 149);
   border-radius: 20px;
   flex-wrap: wrap;
   margin-left: 5%;
@@ -403,7 +438,7 @@ h4.city:hover {
   margin-bottom: 6%;
   overflow: hidden;
   font-size: 0.8em;
-  color: navy;
+  color: darkslategray;
   padding: 10% 10% 10% 10%;
   font-weight: bold;
 }
@@ -424,8 +459,8 @@ h4.city:hover {
 
 .foot {
   display: block;
-  color: navy;
-  font-size: 0.6em;
+  color: darkslategray;
+  font-size: 0.62em;
   text-align: center;
   align-items: center;
   margin-left: 8%;

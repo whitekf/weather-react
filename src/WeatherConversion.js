@@ -44,7 +44,6 @@ export default function WeatherConversion(props) {
               {Math.round(kmHr)}
               {"kph"}{" "}
             </span>
-            <span className="currentWindUnits"> </span>
           </div>
         </ul>
       </div>

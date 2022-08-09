@@ -36,7 +36,7 @@
   margin-bottom: 1%;
   text-align: center;
   align-items: center;
-  color: navy;
+  color: darkslategray;
   background-color: #d2e3ff;
   border-radius: 20px;
   padding: 1% 0% 1% 0%;
@@ -45,7 +45,7 @@
 }
 
 .separator {
-  color: rgb(255, 255, 255);
+  color: rgb(84, 140, 122);
   font-size: 0.45em;
   padding: 10px 40px 10px 40px;
 }
@@ -73,31 +73,31 @@
 }
 
 .WeatherForecast {
-  color: navy;
+  color: darkslategray;
   font-size: 0.7em;
   font-family: Helvetica, "Consolas", "Courier New", monospace;
   font-weight: 550;
-  border: 1px solid #8080ff;
   border-radius: 20px;
+  padding: 5px 25px 35px 25px;
 }
 
 .forecastDay {
-  background-color: rgb(255, 168, 46);
   text-decoration: underline;
   margin-bottom: 2%;
+  padding: 5px 15px 5px 15px;
 }
 
 .forecastTempMax {
-  color: navy;
+  color: darkslategray;
 }
 
 .forecastTempMin {
-  color: navy;
+  color: darkslategray;
   opacity: 0.6;
 }
 
 .Weather canvas {
-  box-shadow: 5px 5px 25px 10px rgb(111, 150, 255);
+  box-shadow: 5px 5px 25px 10px rgb(81, 137, 122);
   border-radius: 50px;
   padding: 10px 10px 10px 10px;
   margin-bottom: 2%;
@@ -105,7 +105,7 @@
 }
 
 .Weather canvas:hover {
-  box-shadow: 5px 5px 25px 10px #f1deff;
+  box-shadow: 5px 5px 25px 10px #5fb38a;
   border-radius: 50px;
   padding: 10px 10px 10px 10px;
   margin-bottom: 2%;
