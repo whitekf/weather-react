@@ -3,10 +3,6 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherConversion from "./WeatherConversion";
 
 export default function WeatherForecastDay(props) {
-  let unit = props.unit;
-  let fMax = props.data.temp.max;
-  let fMin = props.data.temp.min;
-
   function day() {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
