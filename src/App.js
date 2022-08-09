@@ -12,7 +12,13 @@ function App() {
 
         <footer className="foot align-self-center">
           Designed and Coded by{" "}
-          <a href="https://kassiewhite.netlify.app/index.html">Kassie White </a>
+          <a
+            href="https://kassiewhite.netlify.app/index.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Kassie White{" "}
+          </a>
           .{"  "}
           <a
             href="https://github.com/whitekf/weather-react"
